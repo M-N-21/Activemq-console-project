@@ -22,11 +22,26 @@ Il faut d'abord faire un run producteur avant de faire un run du consommateur.
 
 ## Dépendances
 
-Le projet utilise les dépendances suivantes :
+Pour le producteur et le consommateur ajouter dans le pom de chacun ces dependances :
 
-* `javax.jms-api`: Fournit l'API Java Message Service pour les clients.
-* `org.apache.activemq:activemq-all`: Fournit le client pour le système de messagerie Apache ActiveMQ.
-* `org.slf4j:slf4j-simple`: Fournit le journalisation pour l'application.
+```
+ <!-- dependances -->
+  <dependencies>
+      <dependency>
+         <groupId>org.apache.geronimo.specs</groupId>
+         <artifactId>geronimo-jms_1.1_spec</artifactId>
+         <version>1.1</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.qpid</groupId>
+         <artifactId>qpid-jms-client</artifactId>
+         <version>0.40.0</version>
+      </dependency>
+   </dependencies>
+   <!-- dependances -->
+```
+
+
 
 Ces dépendances sont gérées par Maven et sont incluses dans le fichier `pom.xml`.
 
